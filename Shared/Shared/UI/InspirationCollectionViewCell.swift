@@ -16,9 +16,12 @@ public class InspirationCollectionViewCell: UICollectionViewCell {
     
     public override func awakeFromNib() {
         super.awakeFromNib()
+        let bundle = Bundle(identifier: "com.aryasurya.Shared") //remember to change to yours
+        //can also
+        //let bundle = Bundle(for: Self.self) since we access the bundle from inside the framework
         inspirationProductCollectionView.dataSource = self
         inspirationProductCollectionView.delegate = self
-        inspirationProductCollectionView.register(UINib(nibName: "InspirationItemCollectionViewCell", bundle: nil),
+        inspirationProductCollectionView.register(UINib(nibName: "InspirationItemCollectionViewCell", bundle: bundle),
                                                   forCellWithReuseIdentifier: "InspirationItemCollectionViewCell")
     }
 

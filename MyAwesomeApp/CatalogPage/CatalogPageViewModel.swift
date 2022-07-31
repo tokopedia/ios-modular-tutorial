@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Shared
 
 class CatalogPageViewModel {
     var data: [HashDiffable] = []

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Shared
 
 protocol CatalogPageNetworkProvider {
     func fetchProduct(onComplete: @escaping (NetworkResult<ProductResult>) -> Void)
@@ -14,7 +15,8 @@ protocol CatalogPageNetworkProvider {
 
 struct CatalogPageUseCase: CatalogPageNetworkProvider {
     func fetchProduct(onComplete: @escaping (NetworkResult<ProductResult>) -> Void) {
-        guard let url = Bundle.main.path(forResource: "ProductData", ofType: "json") else {
+        let bundle = Bundle(identifier: "com.aryasurya.Shared") // remember to change into yours
+        guard let url = bundle?.path(forResource: "ProductData", ofType: "json") else {
             onComplete(.failed("URL Not found"))
             return
         }
@@ -31,7 +33,8 @@ struct CatalogPageUseCase: CatalogPageNetworkProvider {
     }
     
     func fetchInspiration(onComplete: @escaping (NetworkResult<InspirationResult>) -> Void) {
-        guard let url = Bundle.main.path(forResource: "InspirationData", ofType: "json") else {
+        let bundle = Bundle(identifier: "com.aryasurya.Shared") // remember to change into yours
+        guard let url = bundle?.path(forResource: "InspirationData", ofType: "json") else {
             onComplete(.failed("URL Not found"))
             return
         }

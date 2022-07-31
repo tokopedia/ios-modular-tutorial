@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum NetworkResult<T> {
+public enum NetworkResult<T> {
     case success(T)
     case failed(String)
 }

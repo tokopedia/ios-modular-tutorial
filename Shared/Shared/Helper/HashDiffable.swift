@@ -7,13 +7,13 @@
 
 import Foundation
 
-protocol HashDiffable {
+public protocol HashDiffable {
     var identifier: Int { get }
     func isEqual(to other: Any) -> Bool
 }
 
 extension HashDiffable where Self: Equatable {
-    func isEqual(to other: Any) -> Bool {
+    public func isEqual(to other: Any) -> Bool {
         guard let other = other as? Self else {
             return false
         }

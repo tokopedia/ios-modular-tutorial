@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Shared
 
 class CatalogPageViewController: UIViewController {
 
@@ -26,8 +27,9 @@ class CatalogPageViewController: UIViewController {
         super.viewDidLoad()
         title = "Catalog Page"
         
-        collectionView.register(UINib(nibName: "ProductCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ProductCollectionViewCell")
-        collectionView.register(UINib(nibName: "InspirationCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "InspirationCollectionViewCell")
+        let bundle = Bundle(identifier: "com.aryasurya.Shared")
+        collectionView.register(UINib(nibName: "ProductCollectionViewCell", bundle: bundle), forCellWithReuseIdentifier: "ProductCollectionViewCell")
+        collectionView.register(UINib(nibName: "InspirationCollectionViewCell", bundle: bundle), forCellWithReuseIdentifier: "InspirationCollectionViewCell")
         
         collectionView.dataSource = self
         collectionView.delegate = self

@@ -12,7 +12,23 @@
 		B55429D1289BCACB0092636E /* ProductDetailPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55429CF289BCACB0092636E /* ProductDetailPageViewController.xib */; };
 		B55429D4289BCB670092636E /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B55429D3289BCB670092636E /* Shared.framework */; };
 		B55429D5289BCB670092636E /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B55429D3289BCB670092636E /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B5BB8055289C09FD006EC51C /* ProductDetail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B55429C0289BC9CE0092636E /* ProductDetail.framework */; };
+		B5BB8056289C09FD006EC51C /* ProductDetail.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B55429C0289BC9CE0092636E /* ProductDetail.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B5D33D79289C083200F41B31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D33D78289C083200F41B31 /* AppDelegate.swift */; };
+		B5D33D7B289C083200F41B31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D33D7A289C083200F41B31 /* SceneDelegate.swift */; };
+		B5D33D82289C083300F41B31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5D33D81289C083300F41B31 /* Assets.xcassets */; };
+		B5D33D85289C083300F41B31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D33D83289C083300F41B31 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5BB8057289C09FD006EC51C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B55429B7289BC9CE0092636E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B55429BF289BC9CE0092636E;
+			remoteInfo = ProductDetail;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		B55429D6289BCB670092636E /* Embed Frameworks */ = {
@@ -26,6 +42,17 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5BB8059289C09FD006EC51C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B5BB8056289C09FD006EC51C /* ProductDetail.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +61,12 @@
 		B55429CE289BCACB0092636E /* ProductDetailPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailPageViewController.swift; sourceTree = "<group>"; };
 		B55429CF289BCACB0092636E /* ProductDetailPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductDetailPageViewController.xib; sourceTree = "<group>"; };
 		B55429D3289BCB670092636E /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5D33D76289C083200F41B31 /* ProductDetailSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductDetailSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5D33D78289C083200F41B31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B5D33D7A289C083200F41B31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B5D33D81289C083300F41B31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5D33D84289C083300F41B31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B5D33D86289C083300F41B31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +78,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5D33D73289C083200F41B31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5BB8055289C09FD006EC51C /* ProductDetail.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -52,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				B55429C2289BC9CE0092636E /* ProductDetail */,
+				B5D33D77289C083200F41B31 /* ProductDetailSample */,
 				B55429C1289BC9CE0092636E /* Products */,
 				B55429D2289BCB670092636E /* Frameworks */,
 			);
@@ -61,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				B55429C0289BC9CE0092636E /* ProductDetail.framework */,
+				B5D33D76289C083200F41B31 /* ProductDetailSample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,6 +124,18 @@
 				B55429D3289BCB670092636E /* Shared.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5D33D77289C083200F41B31 /* ProductDetailSample */ = {
+			isa = PBXGroup;
+			children = (
+				B5D33D78289C083200F41B31 /* AppDelegate.swift */,
+				B5D33D7A289C083200F41B31 /* SceneDelegate.swift */,
+				B5D33D81289C083300F41B31 /* Assets.xcassets */,
+				B5D33D83289C083300F41B31 /* LaunchScreen.storyboard */,
+				B5D33D86289C083300F41B31 /* Info.plist */,
+			);
+			path = ProductDetailSample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,6 +171,25 @@
 			productReference = B55429C0289BC9CE0092636E /* ProductDetail.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		B5D33D75289C083200F41B31 /* ProductDetailSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5D33D89289C083300F41B31 /* Build configuration list for PBXNativeTarget "ProductDetailSample" */;
+			buildPhases = (
+				B5D33D72289C083200F41B31 /* Sources */,
+				B5D33D73289C083200F41B31 /* Frameworks */,
+				B5D33D74289C083200F41B31 /* Resources */,
+				B5BB8059289C09FD006EC51C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5BB8058289C09FD006EC51C /* PBXTargetDependency */,
+			);
+			name = ProductDetailSample;
+			productName = ProductDetailSample;
+			productReference = B5D33D76289C083200F41B31 /* ProductDetailSample.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -123,11 +197,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					B55429BF289BC9CE0092636E = {
 						CreatedOnToolsVersion = 13.0;
 						LastSwiftMigration = 1300;
+					};
+					B5D33D75289C083200F41B31 = {
+						CreatedOnToolsVersion = 13.0;
 					};
 				};
 			};
@@ -145,6 +223,7 @@
 			projectRoot = "";
 			targets = (
 				B55429BF289BC9CE0092636E /* ProductDetail */,
+				B5D33D75289C083200F41B31 /* ProductDetailSample */,
 			);
 		};
 /* End PBXProject section */
@@ -155,6 +234,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B55429D1289BCACB0092636E /* ProductDetailPageViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5D33D74289C083200F41B31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5D33D85289C083300F41B31 /* LaunchScreen.storyboard in Resources */,
+				B5D33D82289C083300F41B31 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,7 +257,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5D33D72289C083200F41B31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5D33D79289C083200F41B31 /* AppDelegate.swift in Sources */,
+				B5D33D7B289C083200F41B31 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5BB8058289C09FD006EC51C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B55429BF289BC9CE0092636E /* ProductDetail */;
+			targetProxy = B5BB8057289C09FD006EC51C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B5D33D83289C083300F41B31 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5D33D84289C083300F41B31 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B55429C5289BC9CE0092636E /* Debug */ = {
@@ -353,6 +469,60 @@
 			};
 			name = Release;
 		};
+		B5D33D87289C083300F41B31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BAD847M22D;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProductDetailSample/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aryasurya.ProductDetailSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5D33D88289C083300F41B31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BAD847M22D;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProductDetailSample/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aryasurya.ProductDetailSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -370,6 +540,15 @@
 			buildConfigurations = (
 				B55429C8289BC9CE0092636E /* Debug */,
 				B55429C9289BC9CE0092636E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5D33D89289C083300F41B31 /* Build configuration list for PBXNativeTarget "ProductDetailSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5D33D87289C083300F41B31 /* Debug */,
+				B5D33D88289C083300F41B31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -8,6 +8,7 @@
 import UIKit
 import Catalog
 import Shared
+import ProductDetail
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 

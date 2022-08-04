@@ -8,7 +8,7 @@
 import UIKit
 import Shared
 
-class ProductDetailPageViewController: UIViewController {
+public class ProductDetailPageViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var productNameLabel: UILabel!
@@ -16,16 +16,17 @@ class ProductDetailPageViewController: UIViewController {
     
     let product: Product
     
-    init(product: Product) {
+    public init(product: Product) {
         self.product = product
-        super.init(nibName: "ProductDetailPageViewController", bundle: nil)
+        let bundle = Bundle(for: Self.self)
+        super.init(nibName: "ProductDetailPageViewController", bundle: bundle)
     }
     
     required init?(coder: NSCoder) {
         fatalError()
     }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
 
         imageView.load(url: product.imageURL)

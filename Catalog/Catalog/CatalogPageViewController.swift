@@ -8,22 +8,23 @@
 import UIKit
 import Shared
 
-class CatalogPageViewController: UIViewController {
+public class CatalogPageViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
     let viewModel: CatalogPageViewModel
     
-    init() {
+    public init() {
         self.viewModel = CatalogPageViewModel(useCase: CatalogPageUseCase())
-        super.init(nibName: "CatalogPageViewController", bundle: nil)
+        let bundle = Bundle(for: Self.self)
+        super.init(nibName: "CatalogPageViewController", bundle: bundle)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         title = "Catalog Page"
         
@@ -50,11 +51,11 @@ class CatalogPageViewController: UIViewController {
 }
 
 extension CatalogPageViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.data.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch viewModel.data[indexPath.row] {
         case let data as Product:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCollectionViewCell", for: indexPath) as! ProductCollectionViewCell
@@ -71,7 +72,7 @@ extension CatalogPageViewController: UICollectionViewDataSource {
 }
 
 extension CatalogPageViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch viewModel.data[indexPath.row] {
         case is Product:
             return CGSize(width: (collectionView.frame.width / 2) - 4, height: 300)
@@ -84,11 +85,10 @@ extension CatalogPageViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension CatalogPageViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch viewModel.data[indexPath.row] {
         case let data as Product:
-            let productDetailPage = ProductDetailPageViewController(product: data)
-            UIApplication.topViewController()?.navigationController?.pushViewController(productDetailPage, animated: true)
+            Router.route?(.productDetailPage(product: data))
         default:
             fatalError("can't read the data")
         }

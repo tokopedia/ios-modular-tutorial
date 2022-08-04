@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Catalog
+import Shared
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -22,6 +24,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let rootNavigationController = UINavigationController(rootViewController: CatalogPageViewController())
         window.rootViewController = rootNavigationController
         window.makeKeyAndVisible()
+        
+        Router.route = { destination in
+            switch destination {
+            case let .productDetailPage(product):
+                let productController = ProductDetailPageViewController(product: product)
+                UIApplication.topViewController()?.navigationController?.pushViewController(productController, animated: true)
+            }
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

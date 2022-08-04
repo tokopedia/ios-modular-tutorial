@@ -22,6 +22,7 @@
 		B53DABC22896824F00C306C4 /* InspirationData.json in Resources */ = {isa = PBXBuildFile; fileRef = B53DABB32896824F00C306C4 /* InspirationData.json */; };
 		B53DABC32896824F00C306C4 /* ProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53DABB52896824F00C306C4 /* ProductData.swift */; };
 		B53DABC42896824F00C306C4 /* InspirationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53DABB62896824F00C306C4 /* InspirationData.swift */; };
+		B5542959289BA5820092636E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5542958289BA5820092636E /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		B53DABB32896824F00C306C4 /* InspirationData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = InspirationData.json; sourceTree = "<group>"; };
 		B53DABB52896824F00C306C4 /* ProductData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductData.swift; sourceTree = "<group>"; };
 		B53DABB62896824F00C306C4 /* InspirationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationData.swift; sourceTree = "<group>"; };
+		B5542958289BA5820092636E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				B53DABAE2896824F00C306C4 /* HashDiffable.swift */,
 				B53DABAF2896824F00C306C4 /* UIApplication+TopViewController.swift */,
 				B53DABB02896824F00C306C4 /* NetworkResult.swift */,
+				B5542958289BA5820092636E /* Router.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				B53DABB92896824F00C306C4 /* InspirationItemCollectionViewCell.swift in Sources */,
 				B53DABBB2896824F00C306C4 /* ProductCollectionViewCell.swift in Sources */,
 				B53DABBE2896824F00C306C4 /* HashDiffable.swift in Sources */,
+				B5542959289BA5820092636E /* Router.swift in Sources */,
 				B53DABBF2896824F00C306C4 /* UIApplication+TopViewController.swift in Sources */,
 				B53DABBD2896824F00C306C4 /* UIImageView+Extension.swift in Sources */,
 				B53DABC42896824F00C306C4 /* InspirationData.swift in Sources */,

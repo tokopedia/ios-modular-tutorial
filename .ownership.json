@@ -1,0 +1,16 @@
+{
+"repository_name": "ios-modular-tutorial",
+"description": "Repository for tutorial code base for our medium blog post",
+"directorate": "TECH",
+"namespace": "ios",
+"security_owner": "ferico.samuel@tokopedia.com",
+"app": [
+{
+"name": "ios-modular-tutorial",
+"description": "Repository for tutorial code base for our medium blog post",
+"owner": "ferico.samuel@tokopedia.com",
+"slack_channel": "teamios"
+}
+],
+"last_update": "12/09/2022"
+}
